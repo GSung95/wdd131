@@ -1,50 +1,39 @@
-* {
-	margin: 0;
-	padding: 0;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    grid-template-columns: 1fr; /* Single column layout */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 {text-align: center;}
-h2 {font-size: 1.1rem; text-align: center;
-color: navy; padding: .5rem 1rem 0;}
 nav {
-	margin: 0 auto 2rem;
-	max-width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
-.modern a {
-	flex: 1 1 100%;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.navigation {
-	list-style: none;
-	display: flex;
-	background-color: #333;
-	align-items: center;
-}
-.navigation li {
-	flex: 1 1 auto; /* difference between auto and 100% flex-basis - turn on link borders to view */
-}
-.navigation a {
-	display: block;
-	color: #eee;
-	padding: 0.75rem;
-	text-decoration: none;
-	text-align: center;
-/* 	border: 1px dotted cyan; */
-}
-.navigation a:hover {
-	font-weight: 700;
-	text-decoration: underline;
-	text-decoration-color: yellow;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-.wrap {
-		flex-wrap: wrap;
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main content and sidebar */
 }
 
-p {
-	text-align: center;
-	font-size: smaller;
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
