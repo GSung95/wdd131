@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
     display: grid;
-    grid-template-rows: 1fr .25fr 5fr 1fr; /* Header, Main, Footer */
+    grid-template-rows: 1fr 3fr 1fr; /* Header, Main, Footer */
     grid-template-columns: 1fr; /* Single column layout */
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
@@ -20,6 +22,8 @@ h1 {
 
 nav {
     background-color: #210B2C;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul {
@@ -43,6 +47,7 @@ nav ul li a {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Main content and sidebar */
+    max-width: fit-content;
 }
 
 .card {
