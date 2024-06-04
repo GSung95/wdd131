@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+</head>
+<body>
+    <h1>Review Submitted</h1>
+    <p>Thank you for submitting your review!</p>
+
+    <footer>
+        <p>Common Footer Content</p>
+    </footer>
+
+    <script>
+        if (typeof(Storage) !== "undefined") {
+            let reviewCount = localStorage.getItem('reviewCount');
+            if (reviewCount === null) {
+                reviewCount = 0;
+            }
+            reviewCount++;
+            localStorage.setItem('reviewCount', reviewCount);
+            console.log(`Number of reviews submitted: ${reviewCount}`);
+        } else {
+            console.log("Sorry, your browser does not support Web Storage...");
+        }
+    </script>
+</body>
+</html>
