@@ -1,0 +1,77 @@
+@media only screen and (min-width: 64rem) {
+
+    header, nav, main, footer {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    /*WEATHERFORECAST*/
+section.weatherforecast {    
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    /*TOWN CARDS - index */
+    .towns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: -.5rem;
+    }
+    .towns div {
+        display: block;
+        margin: .5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /*FORMS*/
+    form label.sbs{
+        padding: .4rem 0;
+    }
+
+
+    /*GALLERY*/
+    div.gallery {
+        grid-template-columns: 1fr, 1fr, 1fr;
+    }
+    .pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9 {
+        box-shadow: 5px 5px 5px rgb(190, 190, 190);
+    }
+    div.gallery picture:hover {
+        box-shadow: 10px 10px 10px 10px #999;
+    }
+    .pic1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .pic2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .pic3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .pic4 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .pic5 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .pic6 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .pic7 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .pic8 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .pic9 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+}

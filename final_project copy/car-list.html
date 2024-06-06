@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Home Page">
+        <meta name="author" content="Gene Sunglao">
+        <title>Posh Porshes | Home Page</title>
+
+        <link rel="stylesheet" href="styles/normlize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <script src="scripts/scripts.js" defer></script>
+    </head>
+
+    <body>
+        <!--HEADER-->
+        <div id="headerWrapper">
+            <header class="clearfix">
+                <img src="images/favicon.jpg" alt="Storm Icon">
+                    <h1>Posh Porsches</h1>
+            </header>
+        </div>
+
+        <!--NAVIGATION-->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <button onclick="toggleMenu()">&#9776;</button>
+                <ul id="primaryNav" class="hide">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="car-list.html">Car Collection</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="car-collection">
+            <h2>Our Car Collection</h2>
+            <div id="car-list" class="car-list">
+                <!-- Cars added here via JavaScript -->
+            </div>
+        </div>
+
+        <!--rental form-->
+            <section class="form-container">
+                <form action="submit_rental_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="car">Select Car:</label>
+                <select id="car" name="car">
+                    <option value="911-gt3">Porsche 911 GT3</option>
+                    <option value="cayman-gt4">Porsche 718 Cayman GT4</option>
+                    <option value="taycan-turbo">Porsche Taycan Turbo</option>
+                    <!-- Add more car options here -->
+                </select>
+                
+                <label for="start-date">Rental Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+                
+                <label for="end-date">Rental End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+                
+                <label for="comments">Additional Requests or Comments:</label>
+                <textarea id="comments" name="comments"></textarea>
+                
+                <button type="submit" class="rental-button">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <!--FOOTER-->
+        <div id="footerWrapper">
+            <footer>
+                <p>&copy; <span id="currentyear"></span> Gene Sunglao. Philippines.</p>
+                <p id="lastModified"></p>
+            </footer>
+        </div>
+    </body>
+</html>

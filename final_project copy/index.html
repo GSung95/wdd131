@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Home Page">
+        <meta name="author" content="Gene Sunglao">
+        <title>Posh Porshes | Home Page</title>
+
+        <link rel="stylesheet" href="styles/normlize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <script src="scripts/scripts.js" defer></script>
+    </head>
+
+    <body>
+        <!--HEADER-->
+        <div id="headerWrapper">
+            <header class="clearfix">
+                <img src="images/favicon.jpg" alt="Storm Icon">
+                    <h1>Posh Porsches</h1>
+            </header>
+        </div>
+
+        <!--NAVIGATION-->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <button onclick="toggleMenu()">&#9776;</button>
+                <ul id="primaryNav" class="hide">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="car-list.html">Car Collection</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--MAIN CONTENT-->
+        <main class="clearfix">
+            <h1>Experience the Thrill of the Nurburgring in a Porsche</h1>
+
+            <!--Hero Image-->
+            <div class="heroImage">
+                <picture class="photo">
+                    <source media="(max-width: 200px)" srcset="images/hero_homepage_200.jpg">
+                    <source media="(max-width: 500px)" srcset="images/hero_homepage_500.jpg">
+                    <source media="(max-width: 800px)" srcset="images/hero_homepage_800.jpg">
+                    <img src="images/991.2 GT3RS.jpeg" alt="Lava Orange 992.1 Porsche GT3RS">
+                </picture>
+            </div>
+
+            <!--rental introduction-->
+            <section class="rental">
+                <h2><em>Rent a Porsche and conquer the legendary track</em></h2>
+                <p>Experience the thrill of a lifetime as you take the wheel of a high-performance Porsche on the world-renowned Nurburgring track. Our exclusive rental service offers you the chance to drive some of the most powerful and luxurious sports cars ever made, designed to provide an unmatched driving experience. Whether you’re a seasoned racer or an enthusiast looking to fulfill a dream, our fleet of meticulously maintained Porsches will elevate your skills and excitement to new heights. Get ready to conquer the legendary twists and turns of the Nurburgring and create unforgettable memories on one of the most iconic circuits in motorsport history.</p>
+                <button class="car-list-button" onclick="document.location='car-list.html'">View our Car Collection</button>                
+            </section>
+
+            <!--track experience-->
+            <section class="track-experience">
+                <h2>Experience the Nurburgring</h2>
+                <p>The Nurburgring, often dubbed "The Green Hell," is one of the most famous and challenging racetracks in the world. With its 20.8 kilometers of winding roads, sharp turns, and dramatic elevation changes, it offers a driving experience like no other. This legendary track has tested the skills of the greatest drivers and the limits of the finest cars for decades. When you drive a Porsche on this track, you’re not just renting a car; you’re becoming part of motorsport history. Feel the adrenaline rush as you navigate the intricate curves and long straights, and push your driving skills to the limit on this iconic circuit.</p>
+                <p>Every corner of the Nurburgring presents a new challenge, from the tight hairpins to the high-speed straights. This is the ultimate test of precision, control, and speed. Posh Porsches ensures you have the perfect vehicle to tackle the track, combining power, agility, and safety to provide an unparalleled driving experience.</p>
+            </section>
+
+
+            <!--Company overview-->
+             <section class="overview">
+                <h2>Push the Limits: Rent a Porsche for the Ultimate Nurburgring Experience</h2>
+                <p>Discover the Perfect Fusion of Luxury and Performance – Drive a Porsche and Take on the World-Famous Nurburgring Track</p>
+                <img class="overview" src="images/930turbo.jpg" alt="Lava Orange 992.1 Porsche GT3RS">
+            </section>
+
+            <!--rental form-->
+            <section class="form-container">
+                <form action="submit_rental_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="car">Select Car:</label>
+                <select id="car" name="car">
+                    <option value="911-gt3">Porsche 911 GT3</option>
+                    <option value="cayman-gt4">Porsche 718 Cayman GT4</option>
+                    <option value="taycan-turbo">Porsche Taycan Turbo</option>
+                    <!-- Add more car options here -->
+                </select>
+                
+                <label for="start-date">Rental Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+                
+                <label for="end-date">Rental End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+                
+                <label for="comments">Additional Requests or Comments:</label>
+                <textarea id="comments" name="comments"></textarea>
+                
+                <button type="submit" class="rental-button">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        <!--FOOTER-->
+        <div id="footerWrapper">
+            <footer>
+                <p>&copy; <span id="currentyear"></span> Gene Sunglao. Philippines.</p>
+                <p id="lastModified"></p>
+            </footer>
+        </div>
+    </body>
+</html> 
