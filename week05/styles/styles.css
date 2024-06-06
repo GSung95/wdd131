@@ -1,22 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    display: grid;
+    margin: 0 auto;
+    font-size: 18px;
+    max-width: 500px;
+    color: #FDF8FF;
+}
+
+h1 {
+    text-align: center;
+    background-color: #9893DA;
+    margin: 0 0 1em 0;
+    padding: .5em;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 400px;
+    max-width: 500px;
+    padding: 1.5em;
+    background-color: #72727E;
 }
 
-label, fieldset, textarea, input[type="submit"] {
-    margin-bottom: 10px;
+select, fieldset, textarea, input[type="date"], input[type="text"] {
+    margin-bottom: 1em;
+}
+
+#product-name, #installation-date{
+    padding: .5em;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+textarea {
+    padding: 2em;
+}
+
+input[type="text"] {
+    font-size: 20px;
+    padding:.5em;
+}
+
+input[type="submit"] {
+    font-size: 20px;;
+    padding: .5em;
+}
+
+#fieldset_rating {
+    display: flex;
+}
+
+#fieldset_features {
+    display: grid;
 }
 
 footer {
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
     text-align: center;
+    background-color: #9893DA;
+    margin: 1em 0;
+    padding: 1em;
 }

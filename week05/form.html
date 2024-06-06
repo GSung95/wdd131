@@ -3,65 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review Form</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>W05 Assignment: Product Review Form</title>
+    <meta name="description" content="WDD131 - W05 Assignment: Product Review Form">
+    <meta name="author" content="Gene Sunglao">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
     <h1>Product Review</h1>
     <form method="get" action="review.html">
         <label for="product-name">Product Name:</label>
         <select id="product-name" name="product-name" required>
-            <option value="" disabled selected>Select a Product ...</option>
+            <option value="product" disabled selected>Choose a Product ...</option>
         </select>
 
-        <fieldset>
+        <fieldset id="fieldset_rating">
             <legend>Overall Rating:</legend>
             <label>
-                <input type="radio" name="rating" value="1" required> 1 ☆
+                <input type="radio" name="rating" value="1" required> ☆
             </label>
             <label>
-                <input type="radio" name="rating" value="2"> 2 ☆☆
+                <input type="radio" name="rating" value="2"> ☆☆
             </label>
             <label>
-                <input type="radio" name="rating" value="3"> 3 ☆☆☆
+                <input type="radio" name="rating" value="3"> ☆☆☆
             </label>
             <label>
-                <input type="radio" name="rating" value="4"> 4 ☆☆☆☆
+                <input type="radio" name="rating" value="4"> ☆☆☆☆
             </label>
             <label>
-                <input type="radio" name="rating" value="5"> 5 ☆☆☆☆☆
+                <input type="radio" name="rating" value="5"> ☆☆☆☆☆
             </label>
         </fieldset>
 
         <label for="installation-date">Date of Installation:</label>
         <input type="date" id="installation-date" name="installation-date" required>
 
-        <fieldset>
-            <legend>Useful Features:</legend>
+        <fieldset id="fieldset_features">
+            <legend>
+                Which features did you find useful in the product?<br>
+                <em>(Check all that apply)</em>
+            </legend>
             <label>
-                <input type="checkbox" id="feature1" name="features" value="Feature 1"> Feature 1
+                <input type="checkbox" id="feature1" name="features" value="Feature 1"> Durability
             </label>
             <label>
-                <input type="checkbox" id="feature2" name="features" value="Feature 2"> Feature 2
+                <input type="checkbox" id="feature2" name="features" value="Feature 2"> Ease of Use
             </label>
             <label>
-                <input type="checkbox" id="feature3" name="features" value="Feature 3"> Feature 3
+                <input type="checkbox" id="feature3" name="features" value="Feature 3"> Performance
+            </label>
+            <label>
+                <input type="checkbox" id="feature3" name="features" value="Feature 4"> Design
             </label>
         </fieldset>
 
-        <label for="written-review">Written Review:</label>
+        <label for="written-review">Written Review (optional):</label>
         <textarea id="written-review" name="written-review"></textarea>
 
-        <label for="user-name">User Name:</label>
+        <label for="user-name">Your Name (optional):</label>
         <input type="text" id="user-name" name="user-name">
 
-        <input type="submit" value="Submit Review">
+        <input type="submit" value="Post Review">
     </form>
 
     <footer>
-        <p>Common Footer Content</p>
+        <p>&copy; <span id="currentyear"></span> Gene Sunglao. Philippines.</p>
+        <p id="lastModified"></p>
     </footer>
-
-    <script src="js/scripts.js"></script>
 </body>
 </html>
