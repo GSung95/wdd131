@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header Styles */
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title h2 {
+    color: #006EB6;
+    font-size: .9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+    text-align: left;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.does-list {
+    padding-left: 40px;
+}
+
+.does-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
